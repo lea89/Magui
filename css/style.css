@@ -1,0 +1,959 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+	font-family: "open-sans";
+}
+
+@font-face
+{
+  font-family: "open-sans";
+  src: url("../font/OpenSans-Light.ttf");
+}
+
+@font-face
+{
+  font-family: "open-sans-italic";
+  src: url("../font/OpenSans-Light-Italic.ttf");
+}
+
+*
+{
+	margin:0;
+	overflow-x: hidden;
+}
+
+body
+{
+	overflow-y: hidden;
+}
+ul,ol
+{
+	list-style: none;
+}
+
+.p1
+{
+	font-size: 3em;
+}
+
+.p2
+{
+	font-size: 2em;
+	width: 75% !important;
+}
+
+.p3
+{
+	font-size: 1em;
+}
+
+
+a,p,label,input[placeholder]
+{
+	font-family: "open-sans";
+	text-decoration: none;
+}
+.header
+{
+	width: 100%;
+	height: 5em;
+	border-bottom: 3px solid #519E90;
+}
+
+.lowercase
+{
+	text-transform: lowercase;
+}
+
+.uppercase
+{
+	text-transform: uppercase;
+}
+
+.capitalize
+{
+	text-transform: capitalize;	
+}
+
+.menu
+{
+	width: 100%;
+	display: inline;
+}
+.menu img
+{
+	position: absolute;
+	padding: 1em;
+	margin-left: 10em;
+	width: 15%;
+	float:left;
+	height: auto;
+}
+.menu ul
+{	
+	float:right;
+	margin:auto;
+	margin-right: 5%;
+	position: absolute;
+	right: 0;
+	padding: 2em;
+}
+
+.menu ul li
+{
+	display:inline;
+}
+
+.menu ul li a
+{
+	margin: 1em;
+	color:#FE4743;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600; 
+}
+
+.menu ul li a:hover
+{
+	border-bottom: 3px solid #519E90;
+}
+.menu ul li a.active
+{
+	border-bottom: 3px solid #519E90;
+}
+
+.contenedor
+{
+	padding: 1em;
+	width: 100%;
+	display: inline;
+}
+
+.contenedor h1
+{
+	position: relative;
+	text-align: center;
+	font-size: 4em;
+}
+
+.home-comunicate
+{
+	position: relative;
+	margin: auto;
+}
+
+.home-comunicate div
+{
+	width: 50%;
+	float: left;
+}
+
+.home-comunicate div img
+{
+	width: 70%;
+	left:10%;
+	float: right;
+	height: auto;
+}
+
+.home-comunicate div p
+{
+	position: relative;
+	width: 60%;
+	left: 0px;
+}
+
+.home-comunicate div .p1,.p2
+{
+	margin-top:15%;
+}
+
+.btn-recursos
+{
+	width: auto !important;
+	position: relative;
+	background-color:#FE4743;
+	left:10%;
+	margin-top: 3%;
+	overflow: hidden;
+}
+
+.btn-recursos > a
+{
+	text-decoration: none;
+	padding:  1em 2em 1em 2em;
+	color: white;
+	font-size: 1.7em;
+}
+
+
+div p.descripcion
+{
+	margin-top: 5% ;
+	text-align: center;
+	width: 60%;
+}
+
+img.contacto
+{
+	position: relative;
+	width: 40%;
+	float: right;
+	height: auto;
+}
+
+
+form
+{
+	width: 25%;
+	border:1px solid #ccc;
+	margin:5%;
+	padding: 5%;
+	display: inline-block;
+	float: left;
+}
+
+label
+{
+	display: block;
+}
+
+input,textarea
+{
+	margin-bottom: 5%;
+	width: 100%;
+	padding: 3%;
+	box-shadow: border-box;
+}
+
+textarea
+{
+	height: 10em;
+}
+input:focus,textarea:focus
+{
+	border: 1px solid #FE4743;
+	outline: none;
+}
+
+.te_ayudo .identidad_visual,.comunicacion,.renovar
+{
+	padding: 0% 10%;
+}
+
+div.titulo h1
+{
+	position: relative;
+	width: 50%;
+	display: inline;
+	font-size: 4em;
+}
+
+div.titulo
+{
+	width: 35%;
+	margin: auto;
+	margin-bottom: 5%;
+}
+
+.titulo img[alt="Punto"]
+{
+	width: 2%;
+	vertical-align: text-top;
+	height: auto;
+}
+
+div img[alt="Identidad Visual"]
+{
+	background-color: #F5FCFB;
+	height: auto;
+}
+
+img[alt="Comunicacion"]
+{
+	background-color: #FFDCDE;
+	height: auto;
+}
+
+img[alt="Renovar tu imagen"]
+{
+	background-color: #F5FCFB;
+	height: auto;
+}
+
+.te_ayudo img
+{
+	width: 50%;
+	box-sizing: border-box;
+	height: auto;
+}
+
+.te_ayudo div
+{
+	position: relative;
+}
+
+.te_ayudo div h3
+{
+	
+	font-size: 1.3em;
+	position: relative;
+	text-transform: uppercase;
+	margin: 10% auto;
+}
+
+.te_ayudo div
+{
+	display: block;
+}
+
+.te_ayudo div p
+{
+	/*text-align: center;*/
+	font-size: 1.2em;
+	line-height: 1.9em;
+}
+
+.te_ayudo div a
+{
+	padding: 0.6em;
+	background-color: #FE4647;
+	margin:10em 2em;
+	position:relative;
+	color:white;
+	text-align: center;
+	text-transform: uppercase;
+	left: 31%;
+	display: inline;
+	float: left;
+}
+
+.te_ayudo div a:hover
+{
+	box-shadow: 0 4px 6px rgba(0,0,0,.4);
+}
+
+.identidad_visual img
+{
+	padding: 17%;
+	height: auto;
+}
+
+.identidad_visual div
+{
+	width: 50%;
+	float:right;
+}
+
+.identidad_visual div h3
+{
+	width: 65%;
+	border-bottom: 3px solid #0F9187;
+}
+.identidad_visual div p
+{
+	width: 60%;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.comunicacion img
+{
+	padding: 19%;
+	height: auto;
+}
+.comunicacion div
+{
+	width: 50%;
+	float:left;
+	margin-top: 7%;
+}
+
+.comunicacion div h3,.redes_sociales h4,.importancia_identidad h4
+{
+	width: 78%;
+	border-bottom: 3px solid #FE4647;
+}
+
+.comunicacion div p
+{
+	width: 68%;
+	margin:0% auto;
+}
+
+.renovar img
+{
+	padding: 20%;
+	height: auto;
+}
+
+.renovar div
+{
+	float:right;
+	width: 50%;
+	margin-top: 10%;
+}
+
+.renovar div p
+{
+	width: 65%;
+	margin:0 auto;
+	line-height: 2em;
+}
+
+.renovar div h3
+{
+	width: 50%;
+	margin:5% auto;
+	border-bottom: 3px solid #0F9187;
+}
+
+.importante
+{
+	width: 90%;
+	display: flex!important;
+	background-color: #F5FCFB;
+}
+.importante div
+{
+	width: 100%;
+	float: left;
+	position: flex;
+
+}
+
+.redes_sociales,.importancia_identidad
+{
+	position: relative;
+}
+
+.redes_sociales h4,.importancia_identidad h4
+{
+	margin-top:10%;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.redes_sociales h4
+{
+	width: 85%;
+	margin: 10% auto;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.redes_sociales p
+{
+	padding: 0% 10% !important;
+	font-size: 1em;
+}
+
+.importante
+{
+	margin: auto;
+}
+
+.importante div img[alt="Esquina inferior"]
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 19%;
+	height: auto;
+}
+
+.importante div div img
+{
+	width: 95%;
+	left: 10%;
+	margin: auto;
+	height: auto;
+}
+.importante div img[alt="Cafe y notebook"]
+{
+	box-sizing: border-box;
+	margin: auto;
+	position: relative;
+	height: auto;
+}
+
+.importancia_identidad
+{
+	position: relative;
+	left:5%;
+}
+.importancia_identidad h4
+{
+	width: 90%;
+	margin-bottom:  10%;
+}
+.importancia_identidad p
+{
+	width: 76%;
+}
+
+
+.importancia_identidad div 
+{	
+	position: relative;
+	width: 100%;
+}
+
+.importancia_identidad div img[alt="Puntos de colores"]
+{
+	width: 30%;
+	left: 34%;
+	position: relative;
+	margin-top:20%;
+	margin-bottom:7%;
+	height: auto;
+}
+
+.footer
+{
+	width: 90%;
+	margin: auto;
+	background-color: #FFDCDE;
+}
+
+.footer p
+{
+	width: 60%;
+	margin:auto;
+	padding: 4em;
+	font-family: "open-sans-italic";
+	background-color: #FFDCDE;
+}
+
+.footer p span
+{
+	border-bottom: 3px solid #FE4647;
+}
+
+@media screen and (max-width: 480px) 
+{
+
+
+	.te_ayudo .titulo
+	{
+		width: 100%;
+		text-align: center;
+	}
+
+	.te_ayudo .titulo img
+	{
+		width: 2%;
+	}
+
+	.te_ayudo .titulo h1
+	{	
+		width: 80%
+		margin:auto;
+		font-size:2em;
+	}
+
+	.identidad_visual div p,.comunicacion div p,.renovar div p
+	{
+    	width: 90%;
+    	float: left;
+	}
+
+	.identidad_visual div, .identidad_visual > img,.comunicacion div, .comunicacion > img,.renovar div, .renovar > img
+	{
+		width: 95%;
+		padding: 10% 0;
+		text-align: left;
+	}
+
+
+	.identidad_visual div h3, .renovar div h3, .comunicacion div h3
+	{
+		position: relative;
+		text-align: left;
+		font-size: 1em;
+		margin-bottom: 10%;
+		float: left;
+	}
+
+	.identidad_visual div h3
+	{
+		width:70%
+	}
+
+	.renovar div h3
+	{
+		width:55%
+	}
+
+	.comunicacion div h3
+	{
+		width: 90%;
+	}
+
+	.te_ayudo div a
+	{
+		margin: 5em 1em;
+		left:0;
+	}
+
+	.importante
+	{
+		display: block !important;
+		position: relative;
+	}
+
+	.importante div
+	{
+		height: 100%;
+	}
+
+	.importante p
+	{
+		text-align: center;
+		margin-bottom: 10%;
+	}
+
+	.redes_sociales h4
+	{
+		width: 77%;
+	}
+	.redes_sociales img[alt="Esquina inferior"]
+	{
+		width: 10%!important;
+	}
+	
+	.importancia_identidad p
+	{
+		width: 90%;
+	}
+
+	.importancia_identidad h4
+	{
+		width: 90%;
+		text-align: center;
+	}
+	.footer 
+	{
+		font-size: 1em;
+	}
+
+	.footer p
+	{
+		position: relative;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 1.5em;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 800px) 
+{
+	.te_ayudo .titulo
+	{
+		width: 100%;
+		text-align: center;
+	}
+
+	.te_ayudo .titulo img
+	{
+		width: 1%;
+	}
+
+	.te_ayudo .titulo h1
+	{	
+		width: 80%
+		margin:auto;
+		font-size:2em;
+	}
+
+	.identidad_visual div p,.comunicacion div p,.renovar div p
+	{
+    	width: 90%;
+    	float: left;
+	}
+
+	.identidad_visual > img, .comunicacion > img,.renovar > img
+	{
+		width: 95%;
+		padding: 20%;
+	}
+	.identidad_visual div, .comunicacion div,.renovar div
+	{
+		width: 95%;
+		padding: 5% 0;
+		float: left;
+	}
+
+
+	.identidad_visual div h3, .renovar div h3, .comunicacion div h3
+	{
+		position: relative;
+		font-size: 1em;
+		margin-bottom: 5%;
+		float: left;
+	}
+
+	.identidad_visual div h3
+	{
+		width:42%
+	}
+
+	.comunicacion div h3
+	{
+		width: 55%;
+	}
+
+	.renovar div h3
+	{
+		width:35%
+	}
+
+	.te_ayudo div a
+	{
+		margin: 3em 1em;
+	}
+
+	.importante
+	{
+		display: block !important;
+		position: relative;
+	}
+
+	.importante div
+	{
+		height: 100%;
+	}
+
+	.importante p
+	{
+		text-align: center;
+		margin-bottom: 5%;
+	}
+
+	.redes_sociales h4
+	{
+		width: 87%;
+		margin-top: 5%;
+	}
+
+	.redes_sociales img[alt="Esquina inferior"]
+	{
+		width: 7%!important;
+		margin-top:20%;
+		position: relative;
+		display: block;
+	}
+
+	.te_ayudo div div img[alt="Cafe y notebook"]
+	{
+		width: 90%;
+		margin: auto !important;
+		left: 5% !important;
+		position: relative;
+	}
+
+	.importancia_identidad h4
+	{
+		width: 90%;
+		text-align: center;
+	}
+	
+	.importancia_identidad div
+	{
+		width: 80%;
+	}
+
+	.importancia_identidad p
+	{
+		width: 90%;
+	}
+
+	.importancia_identidad img[alt="Puntos de colores"]
+	{
+		width: 20%;
+		margin-top:10% !important;
+		margin:auto;
+	}
+
+	.footer 
+	{
+		font-size: 1em;
+	}
+
+	.footer p
+	{
+		position: relative;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 1.5em;
+		text-align: center;
+	}
+}
+
+
+@media screen and (min-width: 801px) and (max-width: 1024px) 
+{
+	.te_ayudo .titulo
+	{
+		width: 100%;
+		text-align: center;
+	}
+
+	.te_ayudo .titulo img
+	{
+		width: 1%;
+	}
+
+	.te_ayudo .titulo h1
+	{	
+		width: 90%
+		margin:auto;
+		font-size:3em;
+	}
+
+	.identidad_visual div p,.comunicacion div p,.renovar div p
+	{
+    	width: 100%;
+    	float: left;
+	}
+
+	.identidad_visual > img, .comunicacion > img,.renovar > img
+	{
+		width: 100%;
+		padding: 20%;
+	}
+	.identidad_visual div, .comunicacion div,.renovar div
+	{
+		width: 100%;
+		padding: 5% 0;
+		float: left;
+	}
+
+
+	.identidad_visual div h3, .renovar div h3, .comunicacion div h3
+	{
+		position: relative;
+		font-size: 1em;
+		margin-bottom: 5%;
+		float: left;
+	}
+
+	.identidad_visual div h3
+	{
+		width:34%
+	}
+
+	.comunicacion div h3
+	{
+		width: 43%;
+	}
+
+	.renovar div h3
+	{
+		width:26%
+	}
+
+	.te_ayudo div a
+	{
+		margin-left: 0px;
+		margin-top: 3em;
+		margin-right: 1em;
+	}
+
+	.importante
+	{
+		display: block !important;
+		position: relative;
+	}
+
+	.importante div
+	{
+		height: 100%;
+	}
+
+	.importante p
+	{
+		text-align: center;
+		margin-bottom: 3%;
+	}
+
+	.redes_sociales h4
+	{
+		width: 68%;
+		margin-top: 5%;
+	}
+
+	.redes_sociales img[alt="Esquina inferior"]
+	{
+		width: 7%!important;
+		position: relative;
+		display: block;
+	}
+
+	.te_ayudo div div img[alt="Cafe y notebook"]
+	{
+		width: 90%;
+		margin: auto !important;
+		left: 5% !important;
+		position: relative;
+	}
+
+	.importancia_identidad h4
+	{
+		width: 70%;
+		text-align: center;
+		margin:5% auto;
+	}
+	
+	.importancia_identidad div
+	{
+		width: 100%;
+	}
+
+	.importancia_identidad p
+	{
+		width: 90%;
+		font-size: 1em !important;
+	}
+
+	.importancia_identidad img[alt="Puntos de colores"]
+	{
+		width: 10%;
+		margin-top:10% !important;
+		margin:10% auto;
+	}
+
+	.importancia_identidad div img[alt="Puntos de colores"]
+	{
+		width: 20%;
+		margin:5% auto;
+	}
+	.footer 
+	{
+		font-size: 1em;
+	}
+
+	.footer p
+	{
+		position: relative;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 1.5em;
+		text-align: center;
+	}
+}
