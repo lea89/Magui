@@ -67,13 +67,32 @@ a,p,label,input[placeholder]
 	font-family: "open-sans";
 	text-decoration: none;
 }
-.header
+header
 {
 	width: 100%;
-	height: 5em;
 	border-bottom: 3px solid #519E90;
+
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display: flex;
+
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 }
 
+header div
+{
+	position: absolute;
+	padding: 1em;
+	width: 30%;
+	height: auto;
+}
+
+header div > img
+{
+	width: 50%;
+}
 .lowercase
 {
 	text-transform: lowercase;
@@ -86,52 +105,43 @@ a,p,label,input[placeholder]
 
 .capitalize
 {
-	text-transform: capitalize;	
+	text-transform: capitalize;
 }
 
-.menu
+nav
 {
 	width: 100%;
-	display: inline;
+	display: flex;
 }
-.menu img
+
+nav ul
 {
-	position: absolute;
-	padding: 1em;
-	margin-left: 10em;
-	width: 15%;
-	float:left;
-	height: auto;
-}
-.menu ul
-{	
 	float:right;
 	margin:auto;
-	margin-right: 5%;
 	position: absolute;
 	right: 0;
 	padding: 2em;
 }
 
-.menu ul li
+nav ul li
 {
 	display:inline;
 }
 
-.menu ul li a
+nav ul li a
 {
 	margin: 1em;
 	color:#FE4743;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-weight: 600; 
+	font-weight: 600;
 }
 
-.menu ul li a:hover
+nav ul li a:hover
 {
 	border-bottom: 3px solid #519E90;
 }
-.menu ul li a.active
+nav ul li a.active
 {
 	border-bottom: 3px solid #519E90;
 }
@@ -140,7 +150,12 @@ a,p,label,input[placeholder]
 {
 	padding: 1em;
 	width: 100%;
-	display: inline;
+
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 
 .contenedor h1
@@ -295,12 +310,12 @@ img[alt="Renovar tu imagen"]
 	height: auto;
 }
 
-.te_ayudo img
+/* .te_ayudo img
 {
 	width: 50%;
 	box-sizing: border-box;
 	height: auto;
-}
+} */
 
 .te_ayudo div
 {
@@ -309,7 +324,7 @@ img[alt="Renovar tu imagen"]
 
 .te_ayudo div h3
 {
-	
+
 	font-size: 1.3em;
 	position: relative;
 	text-transform: uppercase;
@@ -361,7 +376,7 @@ img[alt="Renovar tu imagen"]
 
 .identidad_visual div h3
 {
-	width: 65%;
+	width: max-content;
 	border-bottom: 3px solid #0F9187;
 }
 .identidad_visual div p
@@ -385,7 +400,7 @@ img[alt="Renovar tu imagen"]
 
 .comunicacion div h3,.redes_sociales h4,.importancia_identidad h4
 {
-	width: 78%;
+	width: max-content;
 	border-bottom: 3px solid #FE4647;
 }
 
@@ -417,7 +432,7 @@ img[alt="Renovar tu imagen"]
 
 .renovar div h3
 {
-	width: 50%;
+	width: max-content;
 	margin:5% auto;
 	border-bottom: 3px solid #0F9187;
 }
@@ -425,15 +440,14 @@ img[alt="Renovar tu imagen"]
 .importante
 {
 	width: 90%;
-	display: flex!important;
+	display: flex;
 	background-color: #F5FCFB;
 }
 .importante div
 {
 	width: 100%;
-	float: left;
-	position: flex;
-
+	display: flex;
+	flex-flow: column nowrap;
 }
 
 .redes_sociales,.importancia_identidad
@@ -450,7 +464,7 @@ img[alt="Renovar tu imagen"]
 
 .redes_sociales h4
 {
-	width: 85%;
+	width: 100%;
 	margin: 10% auto;
 	font-size: 1em;
 	text-transform: uppercase;
@@ -507,8 +521,8 @@ img[alt="Renovar tu imagen"]
 }
 
 
-.importancia_identidad div 
-{	
+.importancia_identidad div
+{
 	position: relative;
 	width: 100%;
 }
@@ -544,7 +558,7 @@ img[alt="Renovar tu imagen"]
 	border-bottom: 3px solid #FE4647;
 }
 
-@media screen and (max-width: 480px) 
+@media screen and (max-width: 480px)
 {
 
 
@@ -560,7 +574,7 @@ img[alt="Renovar tu imagen"]
 	}
 
 	.te_ayudo .titulo h1
-	{	
+	{
 		width: 80%
 		margin:auto;
 		font-size:2em;
@@ -586,22 +600,10 @@ img[alt="Renovar tu imagen"]
 		text-align: left;
 		font-size: 1em;
 		margin-bottom: 10%;
-		float: left;
-	}
-
-	.identidad_visual div h3
-	{
-		width:70%
-	}
-
-	.renovar div h3
-	{
-		width:55%
-	}
-
-	.comunicacion div h3
-	{
-		width: 90%;
+		display:flex;
+		flex-wrap: nowrap;
+		margin-left: 0px;
+		width: max-content;
 	}
 
 	.te_ayudo div a
@@ -635,7 +637,7 @@ img[alt="Renovar tu imagen"]
 	{
 		width: 10%!important;
 	}
-	
+
 	.importancia_identidad p
 	{
 		width: 90%;
@@ -646,7 +648,7 @@ img[alt="Renovar tu imagen"]
 		width: 90%;
 		text-align: center;
 	}
-	.footer 
+	.footer
 	{
 		font-size: 1em;
 	}
@@ -661,21 +663,47 @@ img[alt="Renovar tu imagen"]
 	}
 }
 
-@media screen and (min-width: 481px) and (max-width: 800px) 
+@media screen and (min-width: 481px) and (max-width: 800px)
 {
-	.te_ayudo .titulo
+
+	header
 	{
 		width: 100%;
-		text-align: center;
+		height: auto !important;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: center;
+		height: 10em;
 	}
 
-	.te_ayudo .titulo img
+	nav
 	{
-		width: 1%;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	nav ul
+	{
+		display: contents;
+	}
+
+	.te_ayudo .titulo
+	{
+		width: inherit;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.contenedor
+	{
+		display: flex;
+		flex-direction: column;
+		align-content: center;
 	}
 
 	.te_ayudo .titulo h1
-	{	
+	{
 		width: 80%
 		margin:auto;
 		font-size:2em;
@@ -689,7 +717,7 @@ img[alt="Renovar tu imagen"]
 
 	.identidad_visual > img, .comunicacion > img,.renovar > img
 	{
-		width: 95%;
+		width: 50%;
 		padding: 20%;
 	}
 	.identidad_visual div, .comunicacion div,.renovar div
@@ -705,22 +733,20 @@ img[alt="Renovar tu imagen"]
 		position: relative;
 		font-size: 1em;
 		margin-bottom: 5%;
-		float: left;
+		display: flex;
+		flex-wrap: nowrap;
 	}
 
 	.identidad_visual div h3
 	{
-		width:42%
-	}
 
+	}
 	.comunicacion div h3
 	{
-		width: 55%;
 	}
 
 	.renovar div h3
 	{
-		width:35%
 	}
 
 	.te_ayudo div a
@@ -747,8 +773,9 @@ img[alt="Renovar tu imagen"]
 
 	.redes_sociales h4
 	{
-		width: 87%;
+		width: auto;
 		margin-top: 5%;
+		text-align: center;
 	}
 
 	.redes_sociales img[alt="Esquina inferior"]
@@ -769,10 +796,10 @@ img[alt="Renovar tu imagen"]
 
 	.importancia_identidad h4
 	{
-		width: 90%;
+		width: auto;
 		text-align: center;
 	}
-	
+
 	.importancia_identidad div
 	{
 		width: 80%;
@@ -790,7 +817,7 @@ img[alt="Renovar tu imagen"]
 		margin:auto;
 	}
 
-	.footer 
+	.footer
 	{
 		font-size: 1em;
 	}
@@ -806,8 +833,9 @@ img[alt="Renovar tu imagen"]
 }
 
 
-@media screen and (min-width: 801px) and (max-width: 1024px) 
+@media screen and (min-width: 801px) and (max-width: 1024px)
 {
+
 	.te_ayudo .titulo
 	{
 		width: 100%;
@@ -820,7 +848,7 @@ img[alt="Renovar tu imagen"]
 	}
 
 	.te_ayudo .titulo h1
-	{	
+	{
 		width: 90%
 		margin:auto;
 		font-size:3em;
@@ -894,7 +922,7 @@ img[alt="Renovar tu imagen"]
 
 	.redes_sociales h4
 	{
-		width: 68%;
+		width: max-content;
 		margin-top: 5%;
 	}
 
@@ -915,11 +943,11 @@ img[alt="Renovar tu imagen"]
 
 	.importancia_identidad h4
 	{
-		width: 70%;
+		width: max-content;
 		text-align: center;
 		margin:5% auto;
 	}
-	
+
 	.importancia_identidad div
 	{
 		width: 100%;
@@ -943,7 +971,7 @@ img[alt="Renovar tu imagen"]
 		width: 20%;
 		margin:5% auto;
 	}
-	.footer 
+	.footer
 	{
 		font-size: 1em;
 	}
